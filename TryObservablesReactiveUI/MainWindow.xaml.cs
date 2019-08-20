@@ -29,13 +29,13 @@ namespace TryObservablesReactiveUI
                 this.OneWayBind(this.ViewModel, x => x.TheValue, x => x.TheTextBlock.Text)
                     .DisposeWith(disposable);
 
-                this.BindCommand(ViewModel, x => x.TheTextCommand, x => x.TheTextButton)
+                this.BindCommand(ViewModel, x => x.SetValueTo1000000Command, x => x.TheTextButton)
                     .DisposeWith(disposable);
 
                 this.Bind(ViewModel, x => x.TheName, x => x.NameTextBox.Text)
                     .DisposeWith(disposable);
 
-                this.OneWayBind(ViewModel, x => x.Name, x => x.NameTextBlock.Text)
+                this.OneWayBind(ViewModel, x => x.FirstName, x => x.NameTextBlock.Text)
                     .DisposeWith(disposable);
 
 
