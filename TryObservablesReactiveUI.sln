@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29021.104
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryObservablesReactiveUI", "TryObservablesReactiveUI\TryObservablesReactiveUI.csproj", "{51BD9E9B-825F-4E33-A2C6-DFC4E4A08E87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryRectiveUIwithFody", "TryRectiveUIwithFody\TryRectiveUIwithFody.csproj", "{48CF0E61-4AF9-4E23-BF8C-0B07595ECF9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{51BD9E9B-825F-4E33-A2C6-DFC4E4A08E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51BD9E9B-825F-4E33-A2C6-DFC4E4A08E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51BD9E9B-825F-4E33-A2C6-DFC4E4A08E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48CF0E61-4AF9-4E23-BF8C-0B07595ECF9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48CF0E61-4AF9-4E23-BF8C-0B07595ECF9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48CF0E61-4AF9-4E23-BF8C-0B07595ECF9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48CF0E61-4AF9-4E23-BF8C-0B07595ECF9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
