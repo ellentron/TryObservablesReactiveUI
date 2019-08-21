@@ -1,9 +1,11 @@
 ﻿using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
+using System.Reactive.Subjects;
 
 namespace TryRectiveUIwithFody
 {
@@ -19,6 +21,13 @@ namespace TryRectiveUIwithFody
 
             SetValueTo1000000Command = ReactiveCommand.CreateFromObservable(ExecuteSetValueTo1000000Command);
 
+            
+                var subject = new Subject<string>();
+                subject.OnNext("a");
+                subject.OnNext("b");
+                subject.OnNext("c");
+            Console.Read();
+            subject.Dispose();
         }
         #endregion
 
@@ -45,7 +54,31 @@ namespace TryRectiveUIwithFody
         {
             //TheValue = "Hello ReactiveUI";
             TheValue = 10000000;
+
+            //TryObserver();
+
+           
+
             return Observable.Return(Unit.Default);
+        }
+
+ 
+
+        private static void TryObserver()
+        {
+            var numbers = new MySequenceOfNumbers();
+            var observer = new MyConsoleObserver();
+            numbers.Subscribe(observer);
+        }
+
+        /// <summary>
+        /// Takes an IObservable<string> as its parameter. 
+        /// Subject<string> implements this interface.
+        /// </summary>
+        /// <param name="sequence"></param>
+        static void WriteSequenceToConsole(IObservable<string> sequence)
+        {
+            sequence.Subscribe(value=>Debug.WriteLine(value));
         }
         #endregion
 
