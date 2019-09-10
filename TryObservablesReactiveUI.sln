@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaySubjectExample", "Rep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subscribing", "Subscribing\Subscribing.csproj", "{D4038366-550B-479F-872B-6A335FCD9030}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubjectDemo1", "SubjectDemo1\SubjectDemo1.csproj", "{8B6F7682-FF93-49C4-831B-49CDFDCA5B43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer", "Timer\Timer.csproj", "{FA8E33F0-86DD-4E7F-BCEE-F55A6A4B7300}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{D4038366-550B-479F-872B-6A335FCD9030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4038366-550B-479F-872B-6A335FCD9030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4038366-550B-479F-872B-6A335FCD9030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B6F7682-FF93-49C4-831B-49CDFDCA5B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B6F7682-FF93-49C4-831B-49CDFDCA5B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B6F7682-FF93-49C4-831B-49CDFDCA5B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B6F7682-FF93-49C4-831B-49CDFDCA5B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA8E33F0-86DD-4E7F-BCEE-F55A6A4B7300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA8E33F0-86DD-4E7F-BCEE-F55A6A4B7300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA8E33F0-86DD-4E7F-BCEE-F55A6A4B7300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA8E33F0-86DD-4E7F-BCEE-F55A6A4B7300}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

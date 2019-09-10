@@ -1,6 +1,11 @@
-﻿using ReactiveUI;
+﻿using System;
+using ReactiveUI;
+using System.Diagnostics;
 using System.Reactive.Disposables;
+using System.Reactive.Linq;
 using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace TryRectiveUIwithFody
 {
@@ -11,6 +16,11 @@ namespace TryRectiveUIwithFody
     {
         public MainWindow()
         {
+            
+
+
+
+
             InitializeComponent();
             ViewModel = new MyViewModel();
 
@@ -38,6 +48,46 @@ namespace TryRectiveUIwithFody
                 this.OneWayBind(ViewModel, x => x.FirstName, x => x.NameTextBlock.Text)
                     .DisposeWith(disposable);
 
+                //this.Events()
+                //        .Closing
+                //        .Subscribe(;
+
+
+
+                var codes = new[]
+                {
+                    Key.Up,
+                    Key.Up,
+                    Key.Down,
+                    Key.Down,
+                    Key.Left,
+                    Key.Right,
+                    Key.Left,
+                    Key.Right,
+                    Key.A,
+                    Key.B
+                };
+
+                // convert the array into an sequence
+                var koanmi = codes.ToObservable();
+
+                this.Events().KeyUp
+
+                            // we want the keycode
+                            .Select(x => x.Key)
+                            .Do(key => Debug.WriteLine($"{key} was pressed."))
+
+                            // get the last ten keys
+                            .Window(10)
+
+                            // compare to known konami code sequence
+                            .SelectMany(x => x.SequenceEqual(koanmi))
+                            .Do(isMatch => Debug.WriteLine(isMatch))
+
+                            // where we match
+                            .Where(x => x)
+                            .Do(x => Debug.WriteLine("Konami sequence"))
+                            .Subscribe(y => { });
 
                 //this.OneWayBind(ViewModel,
                 //   viewModel => viewModel.Name,
@@ -48,6 +98,8 @@ namespace TryRectiveUIwithFody
                 //    view => view.searchTextBox.Text)
                 //    .DisposeWith(disposableRegistration);
             });
+
+ 
         }
     }
 }
